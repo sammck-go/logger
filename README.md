@@ -453,7 +453,7 @@ func (x *LogLevel) String() string
 
 ```go
 type Logger interface {
-	MinLogger
+	RawLogger
 	GetLogLeveler
 
 	// Panic outputs a log message and then exits with error status
@@ -586,9 +586,9 @@ prefix forking
 #### func  NewLogWrapper
 
 ```go
-func NewLogWrapper(logger MinLogger, prefix string, logLevel LogLevel) Logger
+func NewLogWrapper(logger RawLogger, prefix string, logLevel LogLevel) Logger
 ```
-NewLogWrapper creates a new Logger that wraps an existing MinLogger
+NewLogWrapper creates a new Logger that wraps an existing RawLogger
 
 #### func  NewLogger
 
@@ -606,16 +606,16 @@ func NewLoggerWithFlags(prefix string, flag int, logLevel LogLevel) Logger
 NewLoggerWithFlags creates a new Logger with a given prefix flags, emitting
 output to os.Stderr
 
-#### type MinLogger
+#### type RawLogger
 
 ```go
-type MinLogger interface {
+type RawLogger interface {
 	Print(args ...interface{})
 	Prefix() string
 }
 ```
 
-MinLogger is a minimal logging interface for a logging component
+RawLogger is a minimal logging interface for a logging component
 <!--/tmpl-->
 
 ### Contributing
