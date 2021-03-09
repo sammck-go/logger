@@ -1276,13 +1276,11 @@ standard golang logger can be used.
 
 - http://golang.org/doc/code.html
 - http://golang.org/doc/effective_go.html
-- `github.com/sammck-go/wstunnel/share` contains the shared package
-- `github.com/sammck-go/wstunnel/server` contains the server package
-- `github.com/sammck-go/wstunnel/client` contains the client package
 
 ### Changelog
 
 - `1.0` - Initial release.
+- `1.1` - Source refactoring. Fixed log.Lshortfile and log.Llongfile to display the correct source file. Better example.
 
 ### Todo
 
