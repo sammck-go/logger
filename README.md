@@ -37,11 +37,6 @@ so that log entries associated with an object are annotated with the object's
 identity. New loggers can inherit from existing loggers and add more specific
 annotations.
 
-Package logger makes it easy to add a multilevel logging interface to objects,
-so that log entries associated with an object are annotated with the object's
-identity. New loggers can inherit from existing loggers and add more specific
-annotations.
-
 ## Usage
 
 ```go
